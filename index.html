@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Derecho Procesal - Material de Estudio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Barra de Progreso -->
+    <div class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 py-2">
+            <div class="flex justify-between items-center">
+                <span class="text-sm font-medium">Tu Progreso</span>
+                <span class="text-sm font-medium" id="progress-text">0%</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                <div class="progress-bar bg-[#795548] h-2.5 rounded-full" style="width: 0%" id="progress-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex h-screen pt-12">
+        <!-- Barra Lateral -->
+        <aside id="sidebar" class="w-64 bg-[#F5F1EB] p-4 overflow-y-auto transition-transform -translate-x-full md:translate-x-0 fixed md:relative h-full z-40">
+            <h1 class="text-xl font-bold text-[#795548] mb-6">Derecho Procesal</h1>
+            <nav>
+                <ul>
+                    <li><a href="#" class="sidebar-link block p-3 rounded-lg mb-2 text-sm font-medium" data-target="tema-1" style="background: linear-gradient(135deg, #FF9A8B 0%, #FF6A88 100%); color: white;">TEMA I: El Derecho Procesal</a></li>
+                    <li><a href="#" class="sidebar-link block p-3 rounded-lg mb-2 text-sm font-medium" data-target="tema-2" style="background: linear-gradient(135deg, #6A11CB 0%, #2575FC 100%); color: white;">TEMA II: La Jurisdicción</a></li>
+                    <li><a href="#" class="sidebar-link block p-3 rounded-lg mb-2 text-sm font-medium" data-target="tema-3" style="background: linear-gradient(135deg, #F093FB 0%, #F5576C 100%); color: white;">TEMA III: La Competencia</a></li>
+                    <li><a href="#" class="sidebar-link block p-3 rounded-lg mb-2 text-sm font-medium" data-target="tema-4" style="background: linear-gradient(135deg, #4FACFE 0%, #00F2FE 100%); color: white;">TEMA IV: La Acción</a></li>
+                    <li><a href="#" class="sidebar-link block p-3 rounded-lg mb-2 text-sm font-medium" data-target="tema-5" style="background: linear-gradient(135deg, #FA8BFF 0%, #2BD2FF 100%); color: white;">TEMA V: El Proceso</a></li>
+                    <li><a href="#" class="sidebar-link block p-3 rounded-lg mb-2 text-sm font-medium" data-target="tema-6" style="background: linear-gradient(135deg, #FFD26F 0%, #3677FF 100%); color: white;">TEMA VI: Sujetos Procesales</a></li>
+                    <li><a href="#" class="sidebar-link block p-3 rounded-lg mb-2 text-sm font-medium" data-target="tema-7" style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); color: white;">TEMA VII: Actos Procesales</a></li>
+                    <li><a href="#" class="sidebar-link block p-3 rounded-lg mb-2 text-sm font-medium" data-target="tema-8" style="background: linear-gradient(135deg, #FC466B 0%, #3F5EFB 100%); color: white;">TEMA VIII: Principios del Proceso</a></li>
+                </ul>
+            </nav>
+            <div class="teacher-info mt-auto bg-[#A1887F] text-white p-4 rounded-lg">
+                <p class="font-bold text-sm">MSc Arianda Salazar Boniche</p>
+                <p class="text-xs">Docente</p>
+            </div>
+        </aside>
+
+        <!-- Contenido Principal -->
+        <main class="flex-1 p-4 md:p-8 overflow-y-auto">
+            <button id="menu-toggle" class="md:hidden mb-4 p-2 rounded-md bg-[#EAE3D9] text-[#795548]">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div id="content-area">
+                <!-- Aquí va todo el contenido de los temas y cuestionarios. Pega aquí lo que estaba dentro de <main> en tu archivo original -->
+                <!-- ... -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal para resultados del cuestionario -->
+    <div id="quiz-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3 id="modal-title">Resultados del Cuestionario</h3>
+            <div id="modal-body">
+                <p id="score-message"></p>
+                <div id="trophy-container"></div>
+                <p id="encouragement-message"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
